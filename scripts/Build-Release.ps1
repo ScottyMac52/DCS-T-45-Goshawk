@@ -1,0 +1,51 @@
+param(
+  [Parameter(Mandatory = $true)][string]$Version
+)
+$ErrorActionPreference = 'Stop'
+$root = Split-Path -Parent $PSScriptRoot
+$dist = Join-Path $root 'dist'
+$pkgName = 'DCS-T-45-Components'
+$ovgme = Join-Path $dist "$pkgName-$Version-OVGME.zip"
+if (-not (Test-Path $ovgme -PathType Leaf)) { throw "Missing OVGME zip $ovgme" }
+
+$bundleName = "$pkgName-$Version-Complete"
+$buildRoot = Join-Path $dist "release-stage-$Version"
+$bundleRoot = Join-Path $buildRoot $bundleName
+$zip = Join-Path $dist "$bundleName.zip"
+
+if (Test-Path $buildRoot) { Remove-Item $buildRoot -Recurse -Force }
+New-Item -ItemType Directory -Force -Path (Join-Path $bundleRoot 'OVGME') | Out-Null
+New-Item -ItemType Directory -Force -Path (Join-Path $bundleRoot 'Documentation') | Out-Null
+
+Copy-Item $ovgme (Join-Path $bundleRoot 'OVGME')
+Copy-Item (Join-Path $root 'README.md') (Join-Path $bundleRoot 'Documentation/README.md') -ErrorAction SilentlyContinue
+Copy-Item (Join-Path $root 'packaging/release/RELEASE-NOTES.md') (Join-Path $bundleRoot 'Documentation/RELEASE-NOTES.md') -ErrorAction SilentlyContinue
+
+$docs = Join-Path $root 'docs'
+if (Test-Path $docs -PathType Container) {
+  Copy-Item (Join-Path $docs '*') (Join-Path $bundleRoot 'Documentation') -Recurse -Force
+}
+
+$autoHotKey = Join-Path $root 'autohotkey'
+if (Test-Path $autoHotKey -PathType Container) {
+  New-Item -ItemType Directory -Force -Path (Join-Path $bundleRoot 'AutoHotKey') | Out-Null
+  Copy-Item (Join-Path $autoHotKey '*') (Join-Path $bundleRoot 'AutoHotKey') -Recurse -Force
+}
+
+Set-Content -Path (Join-Path $bundleRoot 'VERSION.TXT') -Value $Version -NoNewline
+$bundleChecksums = Get-ChildItem $bundleRoot -Recurse -File | Sort-Object FullName | ForEach-Object {
+  $hash = Get-FileHash $_.FullName -Algorithm SHA256
+  $relativePath = [IO.Path]::GetRelativePath($bundleRoot, $_.FullName).Replace('\', '/')
+  "$($hash.Hash.ToLowerInvariant())  $relativePath"
+}
+$bundleChecksums | Set-Content (Join-Path $bundleRoot 'SHA256SUMS.txt') -Encoding utf8
+
+if (Test-Path $zip) { Remove-Item $zip -Force }
+Compress-Archive -Path $bundleRoot -DestinationPath $zip -CompressionLevel Optimal
+
+$releaseChecksums = Get-ChildItem (Join-Path $dist '*.zip') | Sort-Object Name | ForEach-Object {
+  $hash = Get-FileHash $_.FullName -Algorithm SHA256
+  "$($hash.Hash.ToLowerInvariant())  $($_.Name)"
+}
+$releaseChecksums | Set-Content (Join-Path $dist 'SHA256SUMS.txt') -Encoding utf8
+Write-Host "Wrote $zip"
