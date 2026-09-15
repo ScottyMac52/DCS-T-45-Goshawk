@@ -876,5 +876,78 @@
       "mode": "hold",
       "semanticModifier": "RWin"
     }
-  }
+  },
+  "summaryPages": [
+    {
+      "type": "summary",
+      "file": "00-T45-CONTROL-OVERVIEW",
+      "title": "T-45 GOSHAWK USED DEVICES",
+      "kicker": "PHYSICAL CONTROLLERS USED BY THIS CONFIGURATION",
+      "items": [
+        {
+          "key": "STICK",
+          "text": "VKB F-14 • guns • weapons release • trim • NWS • pilot salute",
+          "accent": "orange"
+        },
+        {
+          "key": "MFD 1",
+          "text": "Left MFD • OSBs • power • brightness • display controls",
+          "accent": "blue"
+        },
+        {
+          "key": "MFD 2",
+          "text": "Right MFD • OSBs • power • brightness • display controls",
+          "accent": "blue"
+        },
+        {
+          "key": "PEDALS",
+          "text": "TPR • rudder • left/right wheel brakes",
+          "accent": "blue"
+        },
+        {
+          "key": "THROTTLE",
+          "text": "Viper TQS • thrust • speed brake • engine • canopy • master arm",
+          "accent": "blue"
+        },
+        {
+          "key": "PTO2",
+          "text": "CarrierAce • gear • flaps • hook • launch bar • brakes • bypass",
+          "accent": "cyan"
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "file": "01-VAICOM-OVERVIEW",
+      "title": "VAICOM PRO + VIPER TQS PTT",
+      "kicker": "AUTOHOTKEY V2 • VOICEATTACK / VAICOM PRO",
+      "items": [
+        {
+          "key": "TX1",
+          "text": "Viper TQS 5Joy1 • VHF AM • Ctrl+Alt+Shift+1",
+          "accent": "blue"
+        },
+        {
+          "key": "TX2",
+          "text": "Viper TQS 5Joy2 • UHF • Ctrl+Alt+Shift+2",
+          "accent": "blue"
+        },
+        {
+          "key": "TX3",
+          "text": "Viper TQS 5Joy3 • VHF FM • Ctrl+Alt+Shift+3",
+          "accent": "blue"
+        },
+        {
+          "key": "TX4",
+          "text": "Viper TQS 5Joy4 • AUTO • Ctrl+Alt+Shift+4",
+          "accent": "blue"
+        },
+        {
+          "key": "TX5",
+          "text": "Viper TQS 5Joy5 • INT • Ctrl+Alt+Shift+5",
+          "accent": "blue"
+        }
+      ]
+    }
+  ]
 }
