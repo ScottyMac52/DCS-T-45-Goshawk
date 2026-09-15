@@ -16,15 +16,15 @@
       <rect x="576" y="220" width="420" height="130" rx="16" fill="#142b52" stroke="#579dff" stroke-width="2"/>
       <rect x="592" y="234" width="86" height="102" rx="12" fill="#07111d" stroke="#579dff" stroke-width="2"/>
       <text x="635" y="285" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="800" fill="#579dff">MFD 1</text>
-      <text x="698" y="262" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#f5f9ff">Left MFD • OSBs • power •</text>
-      <text x="698" y="290" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="500" fill="#dbe7f4">brightness • display…</text>
+      <text x="698" y="262" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#f5f9ff">• OSBs • power • brightness</text>
+      <text x="698" y="290" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="500" fill="#dbe7f4">• display controls</text>
       
     </g><g>
       <rect x="96" y="390" width="420" height="130" rx="16" fill="#142b52" stroke="#579dff" stroke-width="2"/>
       <rect x="112" y="404" width="86" height="102" rx="12" fill="#07111d" stroke="#579dff" stroke-width="2"/>
       <text x="155" y="455" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="800" fill="#579dff">MFD 2</text>
-      <text x="218" y="432" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#f5f9ff">Right MFD • OSBs • power •</text>
-      <text x="218" y="460" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="500" fill="#dbe7f4">brightness • display…</text>
+      <text x="218" y="432" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#f5f9ff">• OSBs • power • brightness</text>
+      <text x="218" y="460" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="500" fill="#dbe7f4">• display controls</text>
       
     </g><g>
       <rect x="576" y="390" width="420" height="130" rx="16" fill="#142b52" stroke="#579dff" stroke-width="2"/>
