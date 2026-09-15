@@ -7,7 +7,7 @@
     "tm-mfd-2": "src/Config/Input/T-45/joystick/F16 MFD 2 {51FA39B0-CB32-11ed-8008-444553540000}.diff.lua",
     "tm-tpr": "src/Config/Input/T-45/joystick/T-Pendular-Rudder {14ED3D40-3F58-11f1-8002-444553540000}.diff.lua",
     "viper-tqs-mission-pack": "src/Config/Input/T-45/joystick/Viper TQS {C0A33440-3F54-11f1-8001-444553540000}.diff.lua",
-    "vkb-f14-gunfighter": "src/Config/Input/T-45/joystick/VKBSim Gunfighter F14 {2D5CEC70-5189-11f1-8001-444553540000}.diff.lua",
+    "vkb-f14-gunfighter": "src/Config/Input/T-45/joystick/ VKBSim Gunfighter F14   {2D5CEC70-5189-11f1-8001-444553540000}.diff.lua",
     "winctrl-pto2": "src/Config/Input/T-45/joystick/WINCTRL CarrierAce PTO 2 {19B7D090-6120-11f0-8001-444553540000}.diff.lua"
   },
   "labels": {
