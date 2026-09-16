@@ -29,10 +29,9 @@ rmSync(pngDir, { recursive: true, force: true });
 mkdirSync(svgDir, { recursive: true });
 mkdirSync(pngDir, { recursive: true });
 
-const effectivePages = new Map(config.pages.map((page) => [page.file, page]));
 const configuredPages = [
   ...(rawConfig.summaryPages || []),
-  ...(rawConfig.pages || []).map((page) => effectivePages.get(page.file) || page),
+  ...config.pages,
 ].sort((a, b) => a.file.localeCompare(b.file));
 
 const allPages = configuredPages.flatMap((page) => {

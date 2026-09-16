@@ -50,10 +50,9 @@ function escapeXml(value) {
 }
 
 function expectedPages() {
-  const effectivePages = new Map(config.pages.map((page) => [page.file, page]));
   const pages = [
     ...(rawConfig.summaryPages || []),
-    ...(rawConfig.pages || []).map((page) => effectivePages.get(page.file) || page),
+    ...config.pages,
   ].sort((a, b) => a.file.localeCompare(b.file));
 
   return pages.flatMap((page) => {
