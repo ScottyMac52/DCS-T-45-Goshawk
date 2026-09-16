@@ -21,6 +21,7 @@ local diff = {
     ["d3014pnilu3014cd5vd1vpnilvu0"] = {
       ["added"] = {
         [1] = { ["key"] = "JOY_BTN7" },
+        [2] = { ["key"] = "JOY_BTN3", ["reformers"] = { [1] = "JOY_BTN7" } },
       },
       ["name"] = "Nose Wheel Steering Button",
     },
@@ -47,6 +48,12 @@ local diff = {
         [1] = { ["key"] = "JOY_BTN10" },
       },
       ["name"] = "Trim Hat - NOSE DOWN",
+    },
+    ["d10009pnilunilcdnilvdnilvpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN8" },
+      },
+      ["name"] = "Master Arm Toggle",
     },
   },
   ["axisDiffs"] = {

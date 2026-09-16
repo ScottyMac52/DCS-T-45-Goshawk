@@ -25,6 +25,17 @@
       "RShift": "RShift",
       "RWin": "RWin"
     },
-    "removedProfiles": []
+    "removedProfiles": [],
+    "authoredDevices": [
+      {
+        "deviceId": "winctrl-icp",
+        "profileFile": "WINCTRL ViperAce ICP {3731E2E0-4D98-11f1-8001-444553540000}.diff.lua"
+      },
+      {
+        "deviceId": "tm-mfd",
+        "profileFile": "F16 MFD 3 {C5BE49A0-2342-11ee-8001-444553540000}.diff.lua",
+        "deviceInstance": "MFD3"
+      }
+    ]
   }
 }
