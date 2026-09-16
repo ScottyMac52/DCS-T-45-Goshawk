@@ -95,6 +95,11 @@ try {
   if (-not ($entries | Where-Object { $_.StartsWith("$($payloadPrefix)KNEEBOARD/T-45/", [System.StringComparison]::Ordinal) })) {
     throw 'OVGME archive is missing the kneeboard payload.'
   }
+  foreach ($kneeboardPage in @('03-TM-MFD-3.png', '04-MOZA-AB9.png')) {
+    if ($entries -notcontains "$($payloadPrefix)KNEEBOARD/T-45/$kneeboardPage") {
+      throw "OVGME archive is missing required kneeboard page: $kneeboardPage"
+    }
+  }
   if ($entries -notcontains 'README.TXT') { throw 'OVGME archive is missing README.TXT.' }
   if ($entries -notcontains 'VERSION.TXT') { throw 'OVGME archive is missing VERSION.TXT.' }
 }

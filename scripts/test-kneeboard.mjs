@@ -50,9 +50,10 @@ function escapeXml(value) {
 }
 
 function expectedPages() {
+  const effectivePages = new Map(config.pages.map((page) => [page.file, page]));
   const pages = [
     ...(rawConfig.summaryPages || []),
-    ...config.pages,
+    ...(rawConfig.pages || []).map((page) => effectivePages.get(page.file) || page),
   ].sort((a, b) => a.file.localeCompare(b.file));
 
   return pages.flatMap((page) => {
@@ -74,6 +75,8 @@ test('kneeboard output satisfies the consumer contract and rebuilds deterministi
   const pages = expectedPages();
   const expectedSvg = pages.map(({ outputFile }) => `${outputFile}.svg`).sort((a, b) => a.localeCompare(b));
   const expectedPng = pages.map(({ outputFile }) => `${outputFile}.png`).sort((a, b) => a.localeCompare(b));
+  assert.ok(expectedPng.includes('03-TM-MFD-3.png'), 'MFD3 kneeboard page is not configured');
+  assert.ok(expectedPng.includes('04-MOZA-AB9.png'), 'MOZA AB9 kneeboard page is not configured');
   assert.deepEqual(sortedFiles(sourceDir, '.svg'), expectedSvg, 'unexpected SVG page set');
   assert.deepEqual(sortedFiles(pngDir, '.png'), expectedPng, 'unexpected PNG page set');
 
