@@ -74,6 +74,8 @@ test('kneeboard output satisfies the consumer contract and rebuilds deterministi
   const pages = expectedPages();
   const expectedSvg = pages.map(({ outputFile }) => `${outputFile}.svg`).sort((a, b) => a.localeCompare(b));
   const expectedPng = pages.map(({ outputFile }) => `${outputFile}.png`).sort((a, b) => a.localeCompare(b));
+  assert.ok(expectedPng.includes('03-TM-MFD-3.png'), 'MFD3 kneeboard page is not configured');
+  assert.ok(expectedPng.includes('04-MOZA-AB9.png'), 'MOZA AB9 kneeboard page is not configured');
   assert.deepEqual(sortedFiles(sourceDir, '.svg'), expectedSvg, 'unexpected SVG page set');
   assert.deepEqual(sortedFiles(pngDir, '.png'), expectedPng, 'unexpected PNG page set');
 
