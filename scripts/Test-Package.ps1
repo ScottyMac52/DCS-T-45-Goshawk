@@ -29,27 +29,54 @@ try {
   if ($unexpected.Count -gt 0) {
     throw "Invalid OVGME archive root. Expected '$archiveBase/' but found '$($unexpected[0])'."
   }
-  if (-not ($entries | Where-Object { $_.StartsWith("${payloadPrefix}Config/Input/T-45/joystick/", [System.StringComparison]::Ordinal) })) {
+
+  $profilePrefix = "$($payloadPrefix)Config/Input/T-45/joystick/"
+  $packagedProfiles = @(
+    $entries |
+      Where-Object { $_.StartsWith($profilePrefix, [System.StringComparison]::Ordinal) } |
+      ForEach-Object { $_.Substring($profilePrefix.Length) } |
+      Where-Object { $_ -and -not $_.Contains('/') }
+  )
+  if ($packagedProfiles.Count -eq 0) {
     throw 'OVGME archive is missing the joystick profile payload.'
   }
-  $expectedProfiles = @(
-    'F16 MFD 3 {C5BE49A0-2342-11ee-8001-444553540000}.diff.lua',
-    'MOZA AB9 FFB Base {71DA6210-432E-11f1-8001-444553540000}.diff.lua',
-    'WINCTRL ViperAce ICP {3731E2E0-4D98-11f1-8001-444553540000}.diff.lua'
+
+  $sourceProfileDirectory = Join-Path $root 'src/Config/Input/T-45/joystick'
+  $sourceProfiles = @(
+    Get-ChildItem -LiteralPath $sourceProfileDirectory -Filter '*.diff.lua' -File |
+      ForEach-Object { $_.Name }
   )
-  foreach ($profile in $expectedProfiles) {
-    $entry = "${payloadPrefix}Config/Input/T-45/joystick/$profile"
-    if ($entries -notcontains $entry) { throw "OVGME archive is missing required T-45 profile: $profile" }
+  $missingProfiles = @($sourceProfiles | Where-Object { $packagedProfiles -notcontains $_ })
+  if ($missingProfiles.Count -gt 0) {
+    throw "OVGME archive is missing source profile(s): $($missingProfiles -join ', '). Packaged profiles: $($packagedProfiles -join ', ')"
   }
-  $avaProfile = "${payloadPrefix}Config/Input/T-45/joystick/Ava [R] Viper {F77212B0-00A8-11f1-8001-444553540000}.diff.lua"
-  if ($entries -contains $avaProfile) { throw 'OVGME archive must not contain the AVA Base profile.' }
-  if (-not ($entries | Where-Object { $_.StartsWith("${payloadPrefix}Config/Input/UiLayer/joystick/", [System.StringComparison]::Ordinal) })) {
+
+  $inventory = Get-Content (Join-Path $root 'config/kneeboard.json') -Raw | ConvertFrom-Json
+  $profileProperties = $inventory.profiles.PSObject.Properties
+  foreach ($profileKey in @('tm-mfd-3', 'moza-ab9', 'winctrl-icp')) {
+    $configured = $profileProperties[$profileKey]
+    if (-not $configured) { throw "config/kneeboard.json is missing required profile key: $profileKey" }
+    $profile = Split-Path -Leaf $configured.Value
+    if ($packagedProfiles -notcontains $profile) {
+      throw "OVGME archive is missing configured T-45 profile '$profileKey': $profile"
+    }
+  }
+  if ($profileProperties['ava-base-f16c']) {
+    throw 'config/kneeboard.json must not contain the AVA Base profile.'
+  }
+  if ($packagedProfiles | Where-Object {
+    $_.StartsWith('Ava [R] Viper', [System.StringComparison]::OrdinalIgnoreCase)
+  }) {
+    throw 'OVGME archive must not contain the AVA Base profile.'
+  }
+
+  if (-not ($entries | Where-Object { $_.StartsWith("$($payloadPrefix)Config/Input/UiLayer/joystick/", [System.StringComparison]::Ordinal) })) {
     throw 'OVGME archive is missing the shared UI Layer joystick payload.'
   }
-  if ($entries -notcontains "${payloadPrefix}Config/Input/UiLayer/modifiers.lua") {
+  if ($entries -notcontains "$($payloadPrefix)Config/Input/UiLayer/modifiers.lua") {
     throw 'OVGME archive is missing the shared UI Layer modifiers.lua.'
   }
-  if (-not ($entries | Where-Object { $_.StartsWith("${payloadPrefix}KNEEBOARD/T-45/", [System.StringComparison]::Ordinal) })) {
+  if (-not ($entries | Where-Object { $_.StartsWith("$($payloadPrefix)KNEEBOARD/T-45/", [System.StringComparison]::Ordinal) })) {
     throw 'OVGME archive is missing the kneeboard payload.'
   }
   if ($entries -notcontains 'README.TXT') { throw 'OVGME archive is missing README.TXT.' }
