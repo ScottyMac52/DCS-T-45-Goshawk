@@ -25,7 +25,9 @@
       "RShift": "RShift",
       "RWin": "RWin"
     },
-    "removedProfiles": [],
+    "removedProfiles": [
+      "ava-base-f16c"
+    ],
     "authoredDevices": [
       {
         "deviceId": "winctrl-icp",
@@ -34,7 +36,11 @@
       {
         "deviceId": "tm-mfd",
         "profileFile": "F16 MFD 3 {C5BE49A0-2342-11ee-8001-444553540000}.diff.lua",
-        "deviceInstance": "MFD3"
+        "deviceInstance": "3"
+      },
+      {
+        "deviceId": "moza-ab9",
+        "profileFile": "MOZA AB9 FFB Base {71DA6210-432E-11f1-8001-444553540000}.diff.lua"
       }
     ]
   }

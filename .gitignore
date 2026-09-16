@@ -39,3 +39,7 @@ luac.out
 *.x86_64
 *.hex
 
+# Generated packages and staging
+dist/
+.build/
+node_modules/
