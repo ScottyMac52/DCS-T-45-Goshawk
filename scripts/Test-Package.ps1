@@ -46,23 +46,39 @@ try {
     Get-ChildItem -LiteralPath $sourceProfileDirectory -Filter '*.diff.lua' -File |
       ForEach-Object { $_.Name }
   )
-  $missingProfiles = @($sourceProfiles | Where-Object { $packagedProfiles -notcontains $_ })
-  if ($missingProfiles.Count -gt 0) {
-    throw "OVGME archive is missing source profile(s): $($missingProfiles -join ', '). Packaged profiles: $($packagedProfiles -join ', ')"
+  $unexpectedProfiles = @($packagedProfiles | Where-Object { $sourceProfiles -notcontains $_ })
+  if ($unexpectedProfiles.Count -gt 0) {
+    throw "OVGME archive contains profile(s) not present in the source inventory: $($unexpectedProfiles -join ', ')"
   }
 
   $inventory = Get-Content (Join-Path $root 'config/kneeboard.json') -Raw | ConvertFrom-Json
   $profileProperties = $inventory.profiles.PSObject.Properties
+  $requiredProfiles = @{}
   foreach ($profileKey in @('tm-mfd-3', 'moza-ab9', 'winctrl-icp')) {
     $configured = $profileProperties[$profileKey]
     if (-not $configured) { throw "config/kneeboard.json is missing required profile key: $profileKey" }
     $profile = Split-Path -Leaf $configured.Value
-    if ($packagedProfiles -notcontains $profile) {
-      throw "OVGME archive is missing configured T-45 profile '$profileKey': $profile"
+    if ($sourceProfiles -notcontains $profile) {
+      throw "Configured T-45 profile '$profileKey' is missing from the source inventory: $profile"
     }
+    $requiredProfiles[$profileKey] = $profile
   }
+
+  # DCS-Common intentionally excludes empty diff.lua files from an OVGME package.
+  # MFD3 and the standalone MOZA base are still required in the source/configuration
+  # inventory so the scaffold and generated documentation know about those devices.
+  $requiredPackagedProfile = $requiredProfiles['winctrl-icp']
+  if ($packagedProfiles -notcontains $requiredPackagedProfile) {
+    throw "OVGME archive is missing the configured ICP profile: $requiredPackagedProfile"
+  }
+
   if ($profileProperties['ava-base-f16c']) {
     throw 'config/kneeboard.json must not contain the AVA Base profile.'
+  }
+  if ($sourceProfiles | Where-Object {
+    $_.StartsWith('Ava [R] Viper', [System.StringComparison]::OrdinalIgnoreCase)
+  }) {
+    throw 'The T-45 source inventory must not contain the AVA Base profile.'
   }
   if ($packagedProfiles | Where-Object {
     $_.StartsWith('Ava [R] Viper', [System.StringComparison]::OrdinalIgnoreCase)
