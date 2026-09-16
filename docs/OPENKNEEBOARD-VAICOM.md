@@ -2,23 +2,19 @@
 
 ## Included kneeboard tab
 
-The OvGME package installs 13 numbered PNG reference pages into `KNEEBOARD\T-45`. OpenKneeboard should discover the directory through its DCS Aircraft tab; otherwise add it as a Folder tab.
+The OvGME package installs 9 numbered PNG reference pages into `KNEEBOARD\T-45`. OpenKneeboard should discover the directory through its DCS Aircraft tab; otherwise add it as a Folder tab.
 
 Planned generated pages:
 
+- `00-T45-CONTROL-OVERVIEW.png`
 - `01-TM-MFD-1.png`
-- `01-TM-MFD-1-JOY-BTN7.png`
+- `01-VAICOM-OVERVIEW.png`
 - `02-TM-MFD-2.png`
-- `02-TM-MFD-2-JOY-BTN7.png`
-- `03-TM-TPR.png`
-- `04-VIPER-TQS-MISSION-PACK.png`
-- `05-VKB-F14-GUNFIGHTER.png`
-- `05-VKB-F14-GUNFIGHTER-JOY-BTN7.png`
-- `06-WINCTRL-PTO2.png`
-- `07-WINCTRL-ICP.png`
-- `07-WINCTRL-ICP-JOY-BTN7.png`
-- `08-TM-MFD-MFD3.png`
-- `02-AVA-BASE-F16C.png`
+- `05-TM-TPR.png`
+- `06-VIPER-TQS-MISSION-PACK.png`
+- `07-VKB-F14-GUNFIGHTER.png`
+- `08-WINCTRL-PTO2.png`
+- `09-WINCTRL-ICP.png`
 
 ## VAICOM PRO
 

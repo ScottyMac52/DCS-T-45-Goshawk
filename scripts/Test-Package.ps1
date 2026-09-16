@@ -32,6 +32,17 @@ try {
   if (-not ($entries | Where-Object { $_.StartsWith("${payloadPrefix}Config/Input/T-45/joystick/", [System.StringComparison]::Ordinal) })) {
     throw 'OVGME archive is missing the joystick profile payload.'
   }
+  $expectedProfiles = @(
+    'F16 MFD 3 {C5BE49A0-2342-11ee-8001-444553540000}.diff.lua',
+    'MOZA AB9 FFB Base {71DA6210-432E-11f1-8001-444553540000}.diff.lua',
+    'WINCTRL ViperAce ICP {3731E2E0-4D98-11f1-8001-444553540000}.diff.lua'
+  )
+  foreach ($profile in $expectedProfiles) {
+    $entry = "${payloadPrefix}Config/Input/T-45/joystick/$profile"
+    if ($entries -notcontains $entry) { throw "OVGME archive is missing required T-45 profile: $profile" }
+  }
+  $avaProfile = "${payloadPrefix}Config/Input/T-45/joystick/Ava [R] Viper {F77212B0-00A8-11f1-8001-444553540000}.diff.lua"
+  if ($entries -contains $avaProfile) { throw 'OVGME archive must not contain the AVA Base profile.' }
   if (-not ($entries | Where-Object { $_.StartsWith("${payloadPrefix}Config/Input/UiLayer/joystick/", [System.StringComparison]::Ordinal) })) {
     throw 'OVGME archive is missing the shared UI Layer joystick payload.'
   }
