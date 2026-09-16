@@ -15,33 +15,33 @@ This guide is generated from the effective DCS profile used by T-45.
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
-| `JOY_BTN27` | Right MFD Day Power | — |
-| `JOY_BTN28` | Right MFD Night Power | — |
-| `JOY_BTN21` | Right MFD Brightness Up | — |
-| `JOY_BTN22` | Right MFD Brightness Down | — |
-| `JOY_BTN1` | Right MFD PB 1 | — |
-| `JOY_BTN2` | Right MFD PB 2 | — |
-| `JOY_BTN3` | Right MFD PB 3 | — |
-| `JOY_BTN4` | Right MFD PB 4 | — |
-| `JOY_BTN5` | Right MFD PB 5 | — |
-| `JOY_BTN6` | Right MFD PB 6 | — |
-| `JOY_BTN7` | Right MFD PB 7 | — |
-| `JOY_BTN8` | Right MFD PB 8 | — |
-| `JOY_BTN9` | Right MFD PB 9 | — |
-| `JOY_BTN10` | Right MFD PB 10 | — |
-| `JOY_BTN11` | Right MFD PB 11 | — |
-| `JOY_BTN12` | Right MFD PB 12 | — |
-| `JOY_BTN13` | Right MFD PB 13 | — |
-| `JOY_BTN14` | Right MFD PB 14 | — |
-| `JOY_BTN15` | Right MFD PB 15 | — |
-| `JOY_BTN16` | Right MFD PB 16 | — |
-| `JOY_BTN17` | Right MFD PB 17 | — |
-| `JOY_BTN18` | Right MFD PB 18 | — |
-| `JOY_BTN19` | Right MFD PB 19 | — |
-| `JOY_BTN20` | Right MFD PB 20 | — |
+| `JOY_BTN27` | Day | — |
+| `JOY_BTN28` | Night | — |
+| `JOY_BTN21` | Bright+ | — |
+| `JOY_BTN22` | Bright- | — |
+| `JOY_BTN1` | PB 1 | — |
+| `JOY_BTN2` | PB 2 | — |
+| `JOY_BTN3` | PB 3 | — |
+| `JOY_BTN4` | PB 4 | — |
+| `JOY_BTN5` | PB 5 | — |
+| `JOY_BTN6` | PB 6 | — |
+| `JOY_BTN7` | PB 7 | — |
+| `JOY_BTN8` | PB 8 | — |
+| `JOY_BTN9` | PB 9 | — |
+| `JOY_BTN10` | PB 10 | — |
+| `JOY_BTN11` | PB 11 | — |
+| `JOY_BTN12` | PB 12 | — |
+| `JOY_BTN13` | PB 13 | — |
+| `JOY_BTN14` | PB 14 | — |
+| `JOY_BTN15` | PB 15 | — |
+| `JOY_BTN16` | PB 16 | — |
+| `JOY_BTN17` | PB 17 | — |
+| `JOY_BTN18` | PB 18 | — |
+| `JOY_BTN19` | PB 19 | — |
+| `JOY_BTN20` | PB 20 | — |
 
 #### Modifier layer: `JOY_BTN7`
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
-| `JOY_BTN7 + JOY_BTN28` | Right MFD Off Switch | — |
+| `JOY_BTN7 + JOY_BTN28` | Off | — |

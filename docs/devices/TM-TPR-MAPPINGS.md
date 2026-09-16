@@ -15,6 +15,6 @@ This guide is generated from the effective DCS profile used by T-45.
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
-| `JOY_Y` | Wheel Brake Left | invert=true |
-| `JOY_X` | Wheel Brake Right | invert=true |
+| `JOY_Y` | WBrake Left | invert=true |
+| `JOY_X` | WBrake Right | invert=true |
 | `JOY_Z` | Rudder | — |

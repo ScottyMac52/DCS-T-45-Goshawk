@@ -15,18 +15,18 @@ This guide is generated from the effective DCS profile used by T-45.
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
-| `JOY_BTN32` | Tail Hook - RETRACT | — |
-| `JOY_BTN34` | Tail Hook - EXTEND | — |
-| `JOY_BTN5` | Flap Switch UP else HALF | — |
-| `JOY_BTN7` | Flap Switch DOWN else HALF | — |
-| `JOY_BTN3` | Launch Bar - RETRACT | — |
-| `JOY_BTN4` | Launch Bar - EXTEND | — |
-| `JOY_BTN35` | Landing Gear - UP | — |
-| `JOY_BTN37` | Landing Gear - DOWN | — |
-| `JOY_BTN11` | Anti-Skid Switch - OFF | — |
-| `JOY_BTN10` | Anti-Skid Switch - ON | — |
-| `JOY_BTN38` | Parking Brake - OFF | — |
-| `JOY_BTN39` | Parking Brake - ON | — |
-| `JOY_BTN1` | Master Alert Button - RESET | — |
-| `JOY_BTN13` | Hook Bypass Switch FIELD | — |
-| `JOY_BTN12` | Hook Bypass Switch CARRIER | — |
+| `JOY_BTN32` | Hook Up | — |
+| `JOY_BTN34` | Hook DWN | — |
+| `JOY_BTN5` | Flaps UP | — |
+| `JOY_BTN7` | Flaps DWN | — |
+| `JOY_BTN3` | LBar RET | — |
+| `JOY_BTN4` | LBar EXTND | — |
+| `JOY_BTN35` | Gear UP | — |
+| `JOY_BTN37` | Gear DWN | — |
+| `JOY_BTN11` | ASkid OFF | — |
+| `JOY_BTN10` | ASkid ON | — |
+| `JOY_BTN38` | PBrake OFF | — |
+| `JOY_BTN39` | PBrake ON | — |
+| `JOY_BTN1` | RESET | — |
+| `JOY_BTN13` | FIELD | — |
+| `JOY_BTN12` | CARRIER | — |

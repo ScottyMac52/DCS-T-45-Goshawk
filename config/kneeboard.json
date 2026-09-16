@@ -64,6 +64,9 @@
     "binding-834372b5949373ad": "PB 18",
     "binding-fa9e9359c5d3b5f8": "PB 19",
     "binding-938921cff70f8a42": "PB 20",
+    "binding-f72323b3430e5b8b": "Salute",
+    "binding-b0914ba72e92d60d": "Pitch",
+    "binding-a52bfa0f5bd4a357": "Roll",
     "binding-9b5b8b6344e58be4": "WBrake Left",
     "binding-317f2235cfc027ca": "WBrake Right",
     "binding-104d7ccea9dc5a5d": "Rudder",
@@ -534,6 +537,12 @@
       "kicker": "INSTANCE 3",
       "_comment": "binding labels are stored once in the root labels dictionary; page labels are reserved for non-binding callouts. keep callout IDs in sync with controls.",
       "modifierCallouts": {},
+      "categoryLabels": {
+        "top": "TOP",
+        "right": "RIGHT",
+        "bottom": "BOTTOM",
+        "left": "LEFT"
+      },
       "controls": {
         "mfd-osb-b3": {
           "profile": "tm-mfd-3",
@@ -541,12 +550,6 @@
           "command": "d238pnilunilcdnilvdnilvpnilvunil",
           "labelId": "binding-f72323b3430e5b8b"
         }
-      },
-      "categoryLabels": {
-        "top": "TOP",
-        "right": "RIGHT",
-        "bottom": "BOTTOM",
-        "left": "LEFT"
       }
     },
     {
@@ -1348,43 +1351,43 @@
       "title": "T-45 GOSHAWK USED DEVICES",
       "kicker": "PHYSICAL CONTROLLERS USED BY THIS CONFIGURATION",
       "items": [
-      {
-        "key": "STICK",
-        "text": "VKB F-14 • weapons • trim • NWS • salute",
-        "accent": "orange"
-      },
-      {
-        "key": "BASE",
-        "text": "MOZA AB9 FFB • standalone pitch and roll base",
-        "accent": "orange"
-      },
+        {
+          "key": "STICK",
+          "text": "VKB F-14 • weapons • trim • NWS • salute",
+          "accent": "orange"
+        },
+        {
+          "key": "BASE",
+          "text": "MOZA AB9 FFB • standalone pitch and roll base",
+          "accent": "orange"
+        },
         {
           "key": "MFD 1",
           "text": "• OSBs • power • brightness • display controls",
           "accent": "blue"
         },
-      {
-        "key": "MFD 2",
-        "text": "• OSBs • power • brightness • display controls",
-        "accent": "blue"
-      },
-      {
-        "key": "MFD 3",
-        "text": "• available for assignments",
-        "accent": "blue"
-      },
-      {
-        "key": "ICP",
-        "text": "ViperAce • DEP • HUD lighting • KB",
-        "accent": "cyan"
-      },
         {
-        "key": "TPR",
+          "key": "MFD 2",
+          "text": "• OSBs • power • brightness • display controls",
+          "accent": "blue"
+        },
+        {
+          "key": "MFD 3",
+          "text": "• available for assignments",
+          "accent": "blue"
+        },
+        {
+          "key": "ICP",
+          "text": "ViperAce • DEP • HUD lighting • KB",
+          "accent": "cyan"
+        },
+        {
+          "key": "TPR",
           "text": "TPR • rudder • left/right wheel brakes",
           "accent": "blue"
         },
         {
-        "key": "TQS",
+          "key": "TQS",
           "text": "Viper TQS • thrust • speed brake • engine • canopy • master arm",
           "accent": "blue"
         },

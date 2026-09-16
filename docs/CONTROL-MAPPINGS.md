@@ -8,8 +8,8 @@ This reference is generated from the effective DCS `.diff.lua` profiles used by 
 | --- | --- | --- | ---: |
 | [F16 MFD 1](devices/TM-MFD-1-MAPPINGS.md) | `F16 MFD 1 {51FA60C0-CB32-11ed-800B-444553540000}.diff.lua` | Base, JOY_BTN7 | 25 |
 | [F16 MFD 2](devices/TM-MFD-2-MAPPINGS.md) | `F16 MFD 2 {51FA39B0-CB32-11ed-8008-444553540000}.diff.lua` | Base, JOY_BTN7 | 25 |
-| [F16 MFD 3](devices/TM-MFD-3-MAPPINGS.md) | `F16 MFD 3 {C5BE49A0-2342-11ee-8001-444553540000}.diff.lua` | Base | 0 |
-| [MOZA AB9 FFB Base](devices/MOZA-AB9-MAPPINGS.md) | `MOZA AB9 FFB Base {71DA6210-432E-11f1-8001-444553540000}.diff.lua` | Base | 0 |
+| [F16 MFD 3](devices/TM-MFD-3-MAPPINGS.md) | `F16 MFD 3 {C5BE49A0-2342-11ee-8001-444553540000}.diff.lua` | Base | 1 |
+| [MOZA AB9 FFB Base](devices/MOZA-AB9-MAPPINGS.md) | `MOZA AB9 FFB Base {71DA6210-432E-11f1-8001-444553540000}.diff.lua` | Base | 2 |
 | [T-Pendular-Rudder](devices/TM-TPR-MAPPINGS.md) | `T-Pendular-Rudder {14ED3D40-3F58-11f1-8002-444553540000}.diff.lua` | Base | 3 |
 | [Viper TQS](devices/VIPER-TQS-MISSION-PACK-MAPPINGS.md) | `Viper TQS {C0A33440-3F54-11f1-8001-444553540000}.diff.lua` | Base | 11 |
 | [VKBSim Gunfighter F14](devices/VKB-F14-GUNFIGHTER-MAPPINGS.md) | `VKBSim Gunfighter F14 {2D5CEC70-5189-11f1-8001-444553540000}.diff.lua` | Base, JOY_BTN7 | 10 |
@@ -36,36 +36,36 @@ This reference is generated from the effective DCS `.diff.lua` profiles used by 
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
-| `JOY_BTN27` | Left MFD Day Power | — |
-| `JOY_BTN28` | Left MFD Night Power | — |
-| `JOY_BTN21` | Left MFD Brightness Up | — |
-| `JOY_BTN22` | Left MFD Brightness Down | — |
-| `JOY_BTN1` | Left MFD PB 1 | — |
-| `JOY_BTN2` | Left MFD PB 2 | — |
-| `JOY_BTN3` | Left MFD PB 3 | — |
-| `JOY_BTN4` | Left MFD PB 4 | — |
-| `JOY_BTN5` | Left MFD PB 5 | — |
-| `JOY_BTN6` | Left MFD PB 6 | — |
-| `JOY_BTN7` | Left MFD PB 7 | — |
-| `JOY_BTN8` | Left MFD PB 8 | — |
-| `JOY_BTN9` | Left MFD PB 9 | — |
-| `JOY_BTN10` | Left MFD PB 10 | — |
-| `JOY_BTN11` | Left MFD PB 11 | — |
-| `JOY_BTN12` | Left MFD PB 12 | — |
-| `JOY_BTN13` | Left MFD PB 13 | — |
-| `JOY_BTN14` | Left MFD PB 14 | — |
-| `JOY_BTN15` | Left MFD PB 15 | — |
-| `JOY_BTN16` | Left MFD PB 16 | — |
-| `JOY_BTN17` | Left MFD PB 17 | — |
-| `JOY_BTN18` | Left MFD PB 18 | — |
-| `JOY_BTN19` | Left MFD PB 19 | — |
-| `JOY_BTN20` | Left MFD PB 20 | — |
+| `JOY_BTN27` | Day | — |
+| `JOY_BTN28` | Night | — |
+| `JOY_BTN21` | Bright+ | — |
+| `JOY_BTN22` | Bright- | — |
+| `JOY_BTN1` | PB 1 | — |
+| `JOY_BTN2` | PB 2 | — |
+| `JOY_BTN3` | PB 3 | — |
+| `JOY_BTN4` | PB 4 | — |
+| `JOY_BTN5` | PB 5 | — |
+| `JOY_BTN6` | PB 6 | — |
+| `JOY_BTN7` | PB 7 | — |
+| `JOY_BTN8` | PB 8 | — |
+| `JOY_BTN9` | PB 9 | — |
+| `JOY_BTN10` | PB 10 | — |
+| `JOY_BTN11` | PB 11 | — |
+| `JOY_BTN12` | PB 12 | — |
+| `JOY_BTN13` | PB 13 | — |
+| `JOY_BTN14` | PB 14 | — |
+| `JOY_BTN15` | PB 15 | — |
+| `JOY_BTN16` | PB 16 | — |
+| `JOY_BTN17` | PB 17 | — |
+| `JOY_BTN18` | PB 18 | — |
+| `JOY_BTN19` | PB 19 | — |
+| `JOY_BTN20` | PB 20 | — |
 
 #### Modifier layer: `JOY_BTN7`
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
-| `JOY_BTN7 + JOY_BTN28` | Left MFD Off Switch | — |
+| `JOY_BTN7 + JOY_BTN28` | Off | — |
 
 ### F16 MFD 2
 
@@ -78,36 +78,36 @@ This reference is generated from the effective DCS `.diff.lua` profiles used by 
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
-| `JOY_BTN27` | Right MFD Day Power | — |
-| `JOY_BTN28` | Right MFD Night Power | — |
-| `JOY_BTN21` | Right MFD Brightness Up | — |
-| `JOY_BTN22` | Right MFD Brightness Down | — |
-| `JOY_BTN1` | Right MFD PB 1 | — |
-| `JOY_BTN2` | Right MFD PB 2 | — |
-| `JOY_BTN3` | Right MFD PB 3 | — |
-| `JOY_BTN4` | Right MFD PB 4 | — |
-| `JOY_BTN5` | Right MFD PB 5 | — |
-| `JOY_BTN6` | Right MFD PB 6 | — |
-| `JOY_BTN7` | Right MFD PB 7 | — |
-| `JOY_BTN8` | Right MFD PB 8 | — |
-| `JOY_BTN9` | Right MFD PB 9 | — |
-| `JOY_BTN10` | Right MFD PB 10 | — |
-| `JOY_BTN11` | Right MFD PB 11 | — |
-| `JOY_BTN12` | Right MFD PB 12 | — |
-| `JOY_BTN13` | Right MFD PB 13 | — |
-| `JOY_BTN14` | Right MFD PB 14 | — |
-| `JOY_BTN15` | Right MFD PB 15 | — |
-| `JOY_BTN16` | Right MFD PB 16 | — |
-| `JOY_BTN17` | Right MFD PB 17 | — |
-| `JOY_BTN18` | Right MFD PB 18 | — |
-| `JOY_BTN19` | Right MFD PB 19 | — |
-| `JOY_BTN20` | Right MFD PB 20 | — |
+| `JOY_BTN27` | Day | — |
+| `JOY_BTN28` | Night | — |
+| `JOY_BTN21` | Bright+ | — |
+| `JOY_BTN22` | Bright- | — |
+| `JOY_BTN1` | PB 1 | — |
+| `JOY_BTN2` | PB 2 | — |
+| `JOY_BTN3` | PB 3 | — |
+| `JOY_BTN4` | PB 4 | — |
+| `JOY_BTN5` | PB 5 | — |
+| `JOY_BTN6` | PB 6 | — |
+| `JOY_BTN7` | PB 7 | — |
+| `JOY_BTN8` | PB 8 | — |
+| `JOY_BTN9` | PB 9 | — |
+| `JOY_BTN10` | PB 10 | — |
+| `JOY_BTN11` | PB 11 | — |
+| `JOY_BTN12` | PB 12 | — |
+| `JOY_BTN13` | PB 13 | — |
+| `JOY_BTN14` | PB 14 | — |
+| `JOY_BTN15` | PB 15 | — |
+| `JOY_BTN16` | PB 16 | — |
+| `JOY_BTN17` | PB 17 | — |
+| `JOY_BTN18` | PB 18 | — |
+| `JOY_BTN19` | PB 19 | — |
+| `JOY_BTN20` | PB 20 | — |
 
 #### Modifier layer: `JOY_BTN7`
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
-| `JOY_BTN7 + JOY_BTN28` | Right MFD Off Switch | — |
+| `JOY_BTN7 + JOY_BTN28` | Off | — |
 
 ### F16 MFD 3
 
@@ -118,7 +118,9 @@ This reference is generated from the effective DCS `.diff.lua` profiles used by 
 
 #### Base layer
 
-No module-specific assignments are present. The profile remains available for shared UI Layer controls and future module bindings.
+| Physical input | Assignment | Axis/filter settings |
+| --- | --- | --- |
+| `JOY_BTN13` | Salute | — |
 
 ### MOZA AB9 FFB Base
 
@@ -129,7 +131,10 @@ No module-specific assignments are present. The profile remains available for sh
 
 #### Base layer
 
-No module-specific assignments are present. The profile remains available for shared UI Layer controls and future module bindings.
+| Physical input | Assignment | Axis/filter settings |
+| --- | --- | --- |
+| `JOY_Y` | Pitch | — |
+| `JOY_X` | Roll | — |
 
 ### T-Pendular-Rudder
 
@@ -142,8 +147,8 @@ No module-specific assignments are present. The profile remains available for sh
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
-| `JOY_Y` | Wheel Brake Left | invert=true |
-| `JOY_X` | Wheel Brake Right | invert=true |
+| `JOY_Y` | WBrake Left | invert=true |
+| `JOY_X` | WBrake Right | invert=true |
 | `JOY_Z` | Rudder | — |
 
 ### Viper TQS
@@ -157,15 +162,15 @@ No module-specific assignments are present. The profile remains available for sh
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
-| `JOY_BTN16` | Cage/Uncage Button | — |
-| `JOY_BTN44` | Catapult Hook Up | — |
-| `JOY_BTN10` | Speed Brake Switch FORWARD else CENTER | — |
-| `JOY_BTN9` | Speed Brake Switch AFT else CENTER | — |
-| `JOY_BTN52` | Engine Switch ON | — |
-| `JOY_BTN53` | Engine Switch OFF | — |
-| `JOY_BTN51` | Canopy - CLOSE | — |
-| `JOY_BTN50` | Canopy - OPEN | — |
-| `JOY_BTN23` | Master Arm Switch - ARM else SAFE | — |
+| `JOY_BTN16` | Cage/Uncage | — |
+| `JOY_BTN44` | Catapult | — |
+| `JOY_BTN10` | SBrake RET | — |
+| `JOY_BTN9` | SBrake EXTD | — |
+| `JOY_BTN52` | Eng ON | — |
+| `JOY_BTN53` | Eng OFF | — |
+| `JOY_BTN51` | Canopy CLS | — |
+| `JOY_BTN50` | Canopy OPN | — |
+| `JOY_BTN23` | Master Arm | — |
 | `JOY_RZ` | Zoom View | — |
 | `JOY_Z` | Thrust | — |
 
@@ -181,20 +186,20 @@ No module-specific assignments are present. The profile remains available for sh
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
 | `JOY_BTN1` | Guns Fire | — |
-| `JOY_BTN3` | Weapons Release | — |
-| `JOY_BTN6` | Pilot Salute | — |
-| `JOY_BTN7` | Nose Wheel Steering Button | — |
-| `JOY_BTN12` | Trim Hat - ROLL LEFT | — |
-| `JOY_BTN9` | Trim Hat - ROLL RIGHT | — |
-| `JOY_BTN11` | Trim Hat - NOSE UP | — |
-| `JOY_BTN10` | Trim Hat - NOSE DOWN | — |
-| `JOY_BTN8` | Master Arm Toggle | — |
+| `JOY_BTN3` | Pickle | — |
+| `JOY_BTN6` | Salute | — |
+| `JOY_BTN7` | NWS | — |
+| `JOY_BTN12` | LWD | — |
+| `JOY_BTN9` | RWD | — |
+| `JOY_BTN11` | NOSE UP | — |
+| `JOY_BTN10` | NOSE DOWN | — |
+| `JOY_BTN8` | Master Arm | — |
 
 #### Modifier layer: `JOY_BTN7`
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
-| `JOY_BTN7 + JOY_BTN3` | Nose Wheel Steering Button | — |
+| `JOY_BTN7 + JOY_BTN3` | NWS | — |
 
 ### WINCTRL CarrierAce PTO 2
 
@@ -207,21 +212,21 @@ No module-specific assignments are present. The profile remains available for sh
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
-| `JOY_BTN32` | Tail Hook - RETRACT | — |
-| `JOY_BTN34` | Tail Hook - EXTEND | — |
-| `JOY_BTN5` | Flap Switch UP else HALF | — |
-| `JOY_BTN7` | Flap Switch DOWN else HALF | — |
-| `JOY_BTN3` | Launch Bar - RETRACT | — |
-| `JOY_BTN4` | Launch Bar - EXTEND | — |
-| `JOY_BTN35` | Landing Gear - UP | — |
-| `JOY_BTN37` | Landing Gear - DOWN | — |
-| `JOY_BTN11` | Anti-Skid Switch - OFF | — |
-| `JOY_BTN10` | Anti-Skid Switch - ON | — |
-| `JOY_BTN38` | Parking Brake - OFF | — |
-| `JOY_BTN39` | Parking Brake - ON | — |
-| `JOY_BTN1` | Master Alert Button - RESET | — |
-| `JOY_BTN13` | Hook Bypass Switch FIELD | — |
-| `JOY_BTN12` | Hook Bypass Switch CARRIER | — |
+| `JOY_BTN32` | Hook Up | — |
+| `JOY_BTN34` | Hook DWN | — |
+| `JOY_BTN5` | Flaps UP | — |
+| `JOY_BTN7` | Flaps DWN | — |
+| `JOY_BTN3` | LBar RET | — |
+| `JOY_BTN4` | LBar EXTND | — |
+| `JOY_BTN35` | Gear UP | — |
+| `JOY_BTN37` | Gear DWN | — |
+| `JOY_BTN11` | ASkid OFF | — |
+| `JOY_BTN10` | ASkid ON | — |
+| `JOY_BTN38` | PBrake OFF | — |
+| `JOY_BTN39` | PBrake ON | — |
+| `JOY_BTN1` | RESET | — |
+| `JOY_BTN13` | FIELD | — |
+| `JOY_BTN12` | CARRIER | — |
 
 ### WINCTRL ViperAce ICP
 
@@ -244,40 +249,40 @@ No module-specific assignments are present. The profile remains available for sh
 | `JOY_BTN16` | DEP 8 | — |
 | `JOY_BTN17` | DEP 9 | — |
 | `JOY_BTN18` | DEP 0 | — |
-| `JOY_BTN10` | DEP Clear | — |
-| `JOY_BTN14` | DEP Enter | — |
+| `JOY_BTN10` | DEP CLR | — |
+| `JOY_BTN14` | DEP ENTR | — |
 | `JOY_BTN21` | DEP Bingo | — |
 | `JOY_BTN22` | DEP CRS | — |
-| `JOY_BTN24` | DEP Declutter | — |
+| `JOY_BTN24` | DEP Dec | — |
 | `JOY_BTN25` | DEP HDG | — |
 | `JOY_BTN23` | DEP LAW | — |
 | `JOY_BTN29` | DEP Mode | — |
-| `JOY_BTN19` | HUD Power Knob - ON | — |
-| `JOY_BTN20` | HUD Power Knob - OFF | — |
-| `JOY_BTN30` | DEP Depression Increase | — |
-| `JOY_BTN31` | DEP Depression Decrease | — |
-| `JOY_RY` | HUD Brightness Knob | — |
-| `JOY_Y` | MIP Lights Knob | — |
+| `JOY_BTN19` | HUD ON | — |
+| `JOY_BTN20` | HUD OFF | — |
+| `JOY_BTN30` | DEP Depr+ | — |
+| `JOY_BTN31` | DEP Depr- | — |
+| `JOY_RY` | HUD Bright | — |
+| `JOY_Y` | MIP Lights | — |
 
 #### Modifier layer: `JOY_BTN7`
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
-| `JOY_BTN7 + JOY_BTN7` | Kneeboard Jump To Shortcut 1 | — |
-| `JOY_BTN7 + JOY_BTN8` | Kneeboard Jump To Shortcut 2 | — |
-| `JOY_BTN7 + JOY_BTN9` | Kneeboard Jump To Shortcut 3 | — |
-| `JOY_BTN7 + JOY_BTN11` | Kneeboard Jump To Shortcut 4 | — |
-| `JOY_BTN7 + JOY_BTN12` | Kneeboard Jump To Shortcut 5 | — |
-| `JOY_BTN7 + JOY_BTN13` | Kneeboard Jump To Shortcut 6 | — |
-| `JOY_BTN7 + JOY_BTN15` | Kneeboard Jump To Shortcut 7 | — |
-| `JOY_BTN7 + JOY_BTN16` | Kneeboard Jump To Shortcut 8 | — |
-| `JOY_BTN7 + JOY_BTN17` | Kneeboard Jump To Shortcut 9 | — |
-| `JOY_BTN7 + JOY_BTN18` | Kneeboard Jump To Shortcut 10 | — |
-| `JOY_BTN7 + JOY_BTN23` | Kneeboard Next Shortcut | — |
-| `JOY_BTN7 + JOY_BTN25` | Kneeboard Previous Shortcut | — |
-| `JOY_BTN7 + JOY_BTN24` | Kneeboard Next Page | — |
-| `JOY_BTN7 + JOY_BTN22` | Kneeboard Previous Page | — |
-| `JOY_BTN7 + JOY_BTN21` | Kneeboard ON/OFF | — |
-| `JOY_BTN7 + JOY_BTN14` | Kneeboard Make Shortcut | — |
-| `JOY_BTN7 + JOY_BTN10` | Kneeboard current position mark point | — |
-| `JOY_BTN7 + JOY_BTN29` | Kneeboard glance view | — |
+| `JOY_BTN7 + JOY_BTN7` | Shrtct 1 | — |
+| `JOY_BTN7 + JOY_BTN8` | Shrtct 2 | — |
+| `JOY_BTN7 + JOY_BTN9` | Shrtct 3 | — |
+| `JOY_BTN7 + JOY_BTN11` | Shrtct 4 | — |
+| `JOY_BTN7 + JOY_BTN12` | Shrtct 5 | — |
+| `JOY_BTN7 + JOY_BTN13` | Shrtct 6 | — |
+| `JOY_BTN7 + JOY_BTN15` | Shrtct 7 | — |
+| `JOY_BTN7 + JOY_BTN16` | Shrtct 8 | — |
+| `JOY_BTN7 + JOY_BTN17` | Shrtct 9 | — |
+| `JOY_BTN7 + JOY_BTN18` | Shrtct 10 | — |
+| `JOY_BTN7 + JOY_BTN23` | KB Nxt Shrtct | — |
+| `JOY_BTN7 + JOY_BTN25` | KB Prev Shrtct | — |
+| `JOY_BTN7 + JOY_BTN24` | KB Next Pg | — |
+| `JOY_BTN7 + JOY_BTN22` | KB Prev Pg | — |
+| `JOY_BTN7 + JOY_BTN21` | KB ON/OFF | — |
+| `JOY_BTN7 + JOY_BTN14` | KB Mk Shrtct | — |
+| `JOY_BTN7 + JOY_BTN10` | KB Mark Pt | — |
+| `JOY_BTN7 + JOY_BTN29` | KB Glance | — |

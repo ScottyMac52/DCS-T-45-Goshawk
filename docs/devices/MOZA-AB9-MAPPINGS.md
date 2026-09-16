@@ -13,4 +13,7 @@ This guide is generated from the effective DCS profile used by T-45.
 
 #### Base layer
 
-No module-specific assignments are present. The profile remains available for shared UI Layer controls and future module bindings.
+| Physical input | Assignment | Axis/filter settings |
+| --- | --- | --- |
+| `JOY_Y` | Pitch | — |
+| `JOY_X` | Roll | — |

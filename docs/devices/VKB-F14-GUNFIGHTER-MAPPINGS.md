@@ -16,17 +16,17 @@ This guide is generated from the effective DCS profile used by T-45.
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
 | `JOY_BTN1` | Guns Fire | — |
-| `JOY_BTN3` | Weapons Release | — |
-| `JOY_BTN6` | Pilot Salute | — |
-| `JOY_BTN7` | Nose Wheel Steering Button | — |
-| `JOY_BTN12` | Trim Hat - ROLL LEFT | — |
-| `JOY_BTN9` | Trim Hat - ROLL RIGHT | — |
-| `JOY_BTN11` | Trim Hat - NOSE UP | — |
-| `JOY_BTN10` | Trim Hat - NOSE DOWN | — |
-| `JOY_BTN8` | Master Arm Toggle | — |
+| `JOY_BTN3` | Pickle | — |
+| `JOY_BTN6` | Salute | — |
+| `JOY_BTN7` | NWS | — |
+| `JOY_BTN12` | LWD | — |
+| `JOY_BTN9` | RWD | — |
+| `JOY_BTN11` | NOSE UP | — |
+| `JOY_BTN10` | NOSE DOWN | — |
+| `JOY_BTN8` | Master Arm | — |
 
 #### Modifier layer: `JOY_BTN7`
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
-| `JOY_BTN7 + JOY_BTN3` | Nose Wheel Steering Button | — |
+| `JOY_BTN7 + JOY_BTN3` | NWS | — |

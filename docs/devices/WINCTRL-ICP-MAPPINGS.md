@@ -25,40 +25,40 @@ This guide is generated from the effective DCS profile used by T-45.
 | `JOY_BTN16` | DEP 8 | — |
 | `JOY_BTN17` | DEP 9 | — |
 | `JOY_BTN18` | DEP 0 | — |
-| `JOY_BTN10` | DEP Clear | — |
-| `JOY_BTN14` | DEP Enter | — |
+| `JOY_BTN10` | DEP CLR | — |
+| `JOY_BTN14` | DEP ENTR | — |
 | `JOY_BTN21` | DEP Bingo | — |
 | `JOY_BTN22` | DEP CRS | — |
-| `JOY_BTN24` | DEP Declutter | — |
+| `JOY_BTN24` | DEP Dec | — |
 | `JOY_BTN25` | DEP HDG | — |
 | `JOY_BTN23` | DEP LAW | — |
 | `JOY_BTN29` | DEP Mode | — |
-| `JOY_BTN19` | HUD Power Knob - ON | — |
-| `JOY_BTN20` | HUD Power Knob - OFF | — |
-| `JOY_BTN30` | DEP Depression Increase | — |
-| `JOY_BTN31` | DEP Depression Decrease | — |
-| `JOY_RY` | HUD Brightness Knob | — |
-| `JOY_Y` | MIP Lights Knob | — |
+| `JOY_BTN19` | HUD ON | — |
+| `JOY_BTN20` | HUD OFF | — |
+| `JOY_BTN30` | DEP Depr+ | — |
+| `JOY_BTN31` | DEP Depr- | — |
+| `JOY_RY` | HUD Bright | — |
+| `JOY_Y` | MIP Lights | — |
 
 #### Modifier layer: `JOY_BTN7`
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
-| `JOY_BTN7 + JOY_BTN7` | Kneeboard Jump To Shortcut 1 | — |
-| `JOY_BTN7 + JOY_BTN8` | Kneeboard Jump To Shortcut 2 | — |
-| `JOY_BTN7 + JOY_BTN9` | Kneeboard Jump To Shortcut 3 | — |
-| `JOY_BTN7 + JOY_BTN11` | Kneeboard Jump To Shortcut 4 | — |
-| `JOY_BTN7 + JOY_BTN12` | Kneeboard Jump To Shortcut 5 | — |
-| `JOY_BTN7 + JOY_BTN13` | Kneeboard Jump To Shortcut 6 | — |
-| `JOY_BTN7 + JOY_BTN15` | Kneeboard Jump To Shortcut 7 | — |
-| `JOY_BTN7 + JOY_BTN16` | Kneeboard Jump To Shortcut 8 | — |
-| `JOY_BTN7 + JOY_BTN17` | Kneeboard Jump To Shortcut 9 | — |
-| `JOY_BTN7 + JOY_BTN18` | Kneeboard Jump To Shortcut 10 | — |
-| `JOY_BTN7 + JOY_BTN23` | Kneeboard Next Shortcut | — |
-| `JOY_BTN7 + JOY_BTN25` | Kneeboard Previous Shortcut | — |
-| `JOY_BTN7 + JOY_BTN24` | Kneeboard Next Page | — |
-| `JOY_BTN7 + JOY_BTN22` | Kneeboard Previous Page | — |
-| `JOY_BTN7 + JOY_BTN21` | Kneeboard ON/OFF | — |
-| `JOY_BTN7 + JOY_BTN14` | Kneeboard Make Shortcut | — |
-| `JOY_BTN7 + JOY_BTN10` | Kneeboard current position mark point | — |
-| `JOY_BTN7 + JOY_BTN29` | Kneeboard glance view | — |
+| `JOY_BTN7 + JOY_BTN7` | Shrtct 1 | — |
+| `JOY_BTN7 + JOY_BTN8` | Shrtct 2 | — |
+| `JOY_BTN7 + JOY_BTN9` | Shrtct 3 | — |
+| `JOY_BTN7 + JOY_BTN11` | Shrtct 4 | — |
+| `JOY_BTN7 + JOY_BTN12` | Shrtct 5 | — |
+| `JOY_BTN7 + JOY_BTN13` | Shrtct 6 | — |
+| `JOY_BTN7 + JOY_BTN15` | Shrtct 7 | — |
+| `JOY_BTN7 + JOY_BTN16` | Shrtct 8 | — |
+| `JOY_BTN7 + JOY_BTN17` | Shrtct 9 | — |
+| `JOY_BTN7 + JOY_BTN18` | Shrtct 10 | — |
+| `JOY_BTN7 + JOY_BTN23` | KB Nxt Shrtct | — |
+| `JOY_BTN7 + JOY_BTN25` | KB Prev Shrtct | — |
+| `JOY_BTN7 + JOY_BTN24` | KB Next Pg | — |
+| `JOY_BTN7 + JOY_BTN22` | KB Prev Pg | — |
+| `JOY_BTN7 + JOY_BTN21` | KB ON/OFF | — |
+| `JOY_BTN7 + JOY_BTN14` | KB Mk Shrtct | — |
+| `JOY_BTN7 + JOY_BTN10` | KB Mark Pt | — |
+| `JOY_BTN7 + JOY_BTN29` | KB Glance | — |

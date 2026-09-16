@@ -15,14 +15,14 @@ This guide is generated from the effective DCS profile used by T-45.
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
-| `JOY_BTN16` | Cage/Uncage Button | — |
-| `JOY_BTN44` | Catapult Hook Up | — |
-| `JOY_BTN10` | Speed Brake Switch FORWARD else CENTER | — |
-| `JOY_BTN9` | Speed Brake Switch AFT else CENTER | — |
-| `JOY_BTN52` | Engine Switch ON | — |
-| `JOY_BTN53` | Engine Switch OFF | — |
-| `JOY_BTN51` | Canopy - CLOSE | — |
-| `JOY_BTN50` | Canopy - OPEN | — |
-| `JOY_BTN23` | Master Arm Switch - ARM else SAFE | — |
+| `JOY_BTN16` | Cage/Uncage | — |
+| `JOY_BTN44` | Catapult | — |
+| `JOY_BTN10` | SBrake RET | — |
+| `JOY_BTN9` | SBrake EXTD | — |
+| `JOY_BTN52` | Eng ON | — |
+| `JOY_BTN53` | Eng OFF | — |
+| `JOY_BTN51` | Canopy CLS | — |
+| `JOY_BTN50` | Canopy OPN | — |
+| `JOY_BTN23` | Master Arm | — |
 | `JOY_RZ` | Zoom View | — |
 | `JOY_Z` | Thrust | — |
