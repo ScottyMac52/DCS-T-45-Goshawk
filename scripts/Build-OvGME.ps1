@@ -16,11 +16,13 @@ $pkgName = 'DCS-T-45-Components'
 $archiveBase = "$pkgName-$Version-OVGME"
 $pkg = Join-Path $stage $archiveBase
 $consumerJoystick = Join-Path $root 'src/Config/Input/T-45/joystick'
-New-Item -ItemType Directory -Force -Path (Join-Path $pkg "Config/Input/T-45/joystick") | Out-Null
-Copy-Item (Join-Path $consumerJoystick '*') (Join-Path $pkg "Config/Input/T-45/joystick/") -Force
+$packagedJoystick = Join-Path $pkg 'Config/Input/T-45/joystick'
+New-Item -ItemType Directory -Force -Path $packagedJoystick | Out-Null
+Get-ChildItem -LiteralPath $consumerJoystick -Filter '*.diff.lua' -File |
+  Copy-Item -Destination $packagedJoystick -Force
 $modSrc = Join-Path $root 'src/Config/Input/T-45/modifiers.lua'
 if (Test-Path $modSrc) {
-  Copy-Item $modSrc (Join-Path $pkg "Config/Input/T-45/modifiers.lua") -Force
+  Copy-Item $modSrc (Join-Path $pkg 'Config/Input/T-45/modifiers.lua') -Force
 }
 New-Item -ItemType Directory -Force -Path (Join-Path $pkg 'Config/Input') | Out-Null
 $uiLayerDestination = Join-Path $pkg 'Config/Input/UiLayer'
@@ -28,8 +30,8 @@ $uiLayerDestination = Join-Path $pkg 'Config/Input/UiLayer'
 if ($LASTEXITCODE -ne 0) { throw "UI Layer packaging failed with exit code $LASTEXITCODE" }
 $kb = Join-Path $root 'kneeboard/T-45'
 if (-not (Test-Path $kb)) { throw "Missing kneeboard PNG folder: $kb — run npm run build:kneeboard first." }
-New-Item -ItemType Directory -Force -Path (Join-Path $pkg "KNEEBOARD/T-45") | Out-Null
-Copy-Item (Join-Path $kb '*') (Join-Path $pkg "KNEEBOARD/T-45/") -Force
+New-Item -ItemType Directory -Force -Path (Join-Path $pkg 'KNEEBOARD/T-45') | Out-Null
+Copy-Item (Join-Path $kb '*') (Join-Path $pkg 'KNEEBOARD/T-45/') -Force
 $readme = (Get-Content (Join-Path $root 'packaging/ovgme/README.TXT') -Raw) -replace '\{\{VERSION\}\}', $Version
 Set-Content -Path (Join-Path $stage 'README.TXT') -Value $readme -NoNewline
 Set-Content -Path (Join-Path $stage 'VERSION.TXT') -Value $Version -NoNewline
